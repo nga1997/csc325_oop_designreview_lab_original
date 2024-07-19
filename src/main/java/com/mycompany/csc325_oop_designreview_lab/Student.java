@@ -4,16 +4,51 @@
  */
 package com.mycompany.csc325_oop_designreview_lab;
 
+import java.util.concurrent.RecursiveTask;
+
 /**
  *
  * @author MoaathAlrajab
  */
-public class Student {
-	// ToDo 1: Make this class a child of Human
+public class Student extends Human{
 
-	// ToDo 2: Fix the resulting errors
+    //Initializing both GPA and credits
+    private double gpa;
+    private int credits;
 
-	// ToDo 3: Add a field for GPA and create a setter and a getter
-	
-	// ToDo 4: Add comments to your code
+    //Class for student
+    public Student(String name, short age, int credits, String address){
+        super(name, age, address);
+        this.gpa = gpa;
+        this.credits = credits;
+    }
+
+    //Setter and getters for GPA
+    public double getGpa(){
+        return gpa;
+    }
+    public void setGpa(double gpa){
+        this.gpa = gpa;
+    }
+    //Getter and setters for credits
+    public int getCredits(){
+        return credits;
+    }
+    public void setCredits(int credits){
+        this.credits = credits;
+    }
+    //Getter and Setter for the address
+    @Override
+    public String getAddress(){
+        return this.address;
+    }
+    @Override
+    public void setAddress(String address){
+     this.address = address;
+    }
+    //method to print the results
+    @Override
+    public String toString(){
+        return "Student[ Name= " + getName() + ", Age= " + getAge() + ", Credits= " + getCredits() + " ]";
+    }
 }
